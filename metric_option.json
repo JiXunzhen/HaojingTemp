@@ -1,0 +1,7 @@
+{
+    "A": "alias(integral(sumSeries(haojing.counters.alaya.{service}.*.api)), 'count')",
+    "B": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.{service}.*.api)), '1d'), 'count-1d')",
+    "C": "alias(integral(sumSeries(haojing.counters.alaya.{service}.*.exc)), 'count-exc')",
+    "D": "alias(integral(sumSeries(haojing.counters.alaya.{service}.*.err)), 'count-err')",
+    "E": "aliasByNode(maximumAbove(haojing.timers.alaya.{service}.*.api.percentile.99, 1000), 5)"
+}

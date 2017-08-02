@@ -1,0 +1,695 @@
+{
+    "annotations": {
+        "list": []
+    },
+    "editMode": false,
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "hideControls": false,
+    "id": 147,
+    "links": [],
+    "refresh": false,
+    "rows": [{
+        "collapse": false,
+        "height": 250,
+        "panels": [{
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Ad.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.Ad.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Ad.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Ad.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.Ad.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Ad",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }, {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.User.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.User.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.User.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.User.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.User.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "User",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }, {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Moutan.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.Moutan.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Moutan.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Moutan.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.Moutan.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Moutan",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }, {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Post.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.Post.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Post.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Post.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.Post.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Post",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }, {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Payment.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.Payment.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Payment.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Payment.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.Payment.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Payment",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }, {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "height": "300px",
+            "id": 1,
+            "legend": {
+                "alignAsTable": false,
+                "avg": false,
+                "current": true,
+                "hideEmpty": false,
+                "hideZero": false,
+                "max": false,
+                "min": false,
+                "rightSide": false,
+                "show": false,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 1,
+            "points": true,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                "alias": "count",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-1d",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-exc",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }, {
+                "alias": "count-err",
+                "linewidth": 2,
+                "points": false,
+                "yaxis": 2
+            }],
+            "spaceLength": 10,
+            "span": 6,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "refId": "A",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Order.*.api)), 'count')"
+            }, {
+                "refId": "B",
+                "target": "alias(timeShift(integral(sumSeries(haojing.counters.alaya.Order.*.api)), '1d'), 'count-1d')"
+            }, {
+                "refId": "C",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Order.*.exc)), 'count-exc')"
+            }, {
+                "refId": "D",
+                "target": "alias(integral(sumSeries(haojing.counters.alaya.Order.*.err)), 'count-err')"
+            }, {
+                "refId": "E",
+                "target": "aliasByNode(maximumAbove(haojing.timers.alaya.Order.*.api.percentile.99, 1000), 5)"
+            }],
+            "thresholds": [{
+                "colorMode": "critical",
+                "fill": true,
+                "line": true,
+                "op": "gt",
+                "value": 3000
+            }],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Order",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                "format": "ms",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }, {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+            }]
+        }],
+        "repeat": null,
+        "repeatIteration": null,
+        "repeatRowId": null,
+        "showTitle": false,
+        "title": "Dashboard Row",
+        "titleSize": "h6"
+    }],
+    "schemaVersion": 14,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now/d",
+        "to": "now"
+    },
+    "timepicker": {
+        "refresh_intervals": ["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"],
+        "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
+    },
+    "timezone": "browser",
+    "title": "Gaia Service Dashboard",
+    "version": 20
+}

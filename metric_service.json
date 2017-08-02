@@ -1,0 +1,10 @@
+{
+    "services": [
+        "Ad",
+        "User",
+        "Moutan",
+        "Post",
+        "Payment",
+        "Order"
+    ]
+}
